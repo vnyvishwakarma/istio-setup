@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dummy-microservice
+  template:
+    metadata:
+      labels:
+        app: dummy-microservice
+    spec:
+      containers:
+      - name: dummy-microservice
+        image: vnyhcl/flask-sample-app:v1
+        ports:
+        - containerPort: 5000
