@@ -58,3 +58,14 @@ Send a POST request with a JSON body using a tool like curl:
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"key1": "value1", "key2": "value2"}' "http://127.0.0.1:5000/post-endpoint"
 ```
+
+
+### running the above code using Dockerfile
+
+```bash
+docker build -t flask-sample-app .
+or 
+docker build -t vnyhcl/flask-sample-app:v1 .
+
+docker run -p 5000:5000 vnyhcl/flask-sample-app:v1
+```
